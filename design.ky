@@ -1,0 +1,43 @@
+<ConvertScreen>:
+    GridLayout:
+        cols:1
+        GridLayout:
+            cols:1
+            padding:15,15
+            spacing:20,20
+            Label:
+                text:"Currency Converter"
+                font_size:'20sp'
+            TextInput:
+                id:value
+                hint_text:"Enter the rupee value"
+            Label:
+                text:"Convert To"
+                font_size:'20sp'
+            GridLayout:
+                cols:4
+                Button:
+                    text:"Dollar"
+                    on_press:root.dollar(root.ids.value.text)
+                Button:
+                    text:"Yen"
+                    on_press:root.yen(root.ids.value.text)
+                Button:
+                    text:"Euro"
+                    on_press:root.euro(root.ids.value.text)
+                Button:
+                    text:"Won"
+                    on_press:root.won(root.ids.value.text)
+            Label:
+                id:answer
+                text:" "
+                font_size:'20sp'
+               
+                
+                    
+                
+                    
+
+<RootWidget>:
+    ConvertScreen:
+        name:"convert_screen"
